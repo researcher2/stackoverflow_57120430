@@ -1,0 +1,22 @@
+<html>
+<head>
+</head>
+<body>
+
+    <form method="POST">
+        <input type="text" name="searchQuery" class="searchTerm" placeholder="What are you looking for?">
+        <button type="submit" class="searchButton">submit</button>
+    </form>
+    <div>
+        Searched For: {{ searchedFor }}
+        {% for book in books %}
+        <p>
+        ISBN: {{ book["isbn"] }} <br>
+        Author: {{ book["author"] }} <br>
+        Title: {{ book["author"] }} <br>
+        </p>
+        {% endfor %}
+    </div>
+
+</body>
+</html>
